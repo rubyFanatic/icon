@@ -1,0 +1,25 @@
+h1 Listing associations
+
+table
+  thead
+    tr
+      th Acronym
+      th Fullname
+      th Description
+      th
+      th
+      th
+
+  tbody
+    - @associations.each do |association|
+      tr
+        td = association.acronym
+        td = association.fullname
+        td = association.description
+        td = link_to 'Show', association
+        td = link_to 'Edit', edit_association_path(association)
+        td = link_to 'Destroy', association, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Association', new_association_path

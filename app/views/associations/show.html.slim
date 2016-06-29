@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Acronym:
+  = @association.acronym
+p
+  strong Fullname:
+  = @association.fullname
+p
+  strong Description:
+  = @association.description
+
+= link_to 'Edit', edit_association_path(@association)
+'|
+= link_to 'Back', associations_path
